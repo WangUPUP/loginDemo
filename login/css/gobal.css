@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+}
+
+body {
+    background-image: url(../img/denglu_beijing.png);
+    margin: 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #fff;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #fff;
+}

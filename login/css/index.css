@@ -1,0 +1,222 @@
+header {
+    color: #fff;
+    position: relative;
+}
+
+main {
+    position: relative;
+    background-image: url(../img/denglu_zuoshangjiao.png);
+    height: auto;
+}
+
+/* 标题 */
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-178px);
+    top: 20px;
+}
+
+/* 登录部分 */
+section {
+    z-index: 999;
+}
+
+.login {
+    width: 400px;
+    height: 400px;
+    background-color: #1C1F52;
+    border: 1px solid #0B3A68;
+    position: absolute;
+    top: 180px;
+    right: 150px;
+}
+
+/* 登录标题 */
+.login_header {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* 表单区域 */
+.login_body {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
+/* 输入框区域 */
+.input_body {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #00B8FE;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input_body img {
+    height: 25px;
+    margin-top: 6px;
+    margin-left: 5px;
+    color: #D0D3DC;
+}
+
+.input_body input {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    height: 40px;
+    width: 260px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: #1C1F52;
+    color: #fff;
+
+}
+
+/* 登录底部区域 */
+.login_footer {
+    position: relative;
+}
+
+.remember {
+    width: 300px;
+    height: 30px;
+    position: relative;
+    color: #fff;
+}
+
+.remember_frame {
+    width: 15px;
+    height: 15px;
+    margin: 8px;
+}
+
+.remember div {
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    display: inline-block;
+    width: 60px;
+    font-size: 14px;
+}
+
+.forget {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+}
+
+.forget a {
+    font-size: 14px;
+    color: #00B8FE;
+}
+
+/* 登录按钮 */
+.submit {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 300px;
+    height: 45px;
+    background-color: #00B8FE;
+    border: 1px solid #00B8FE;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 1px 1px 1px #00B8FE;
+}
+
+
+/* 登录区域四角样式 */
+.horn-left-top,
+.horn-right-top,
+.horn-left-bottom,
+.horn-right-bottom {
+    position: absolute;
+    border: 3px solid #00B8FE;
+    width: 20px;
+    height: 20px;
+}
+
+.horn-left-top,
+.horn-right-top {
+    top: 0;
+}
+
+.horn-left-bottom,
+.horn-right-bottom {
+    bottom: 0;
+}
+
+.horn-left-top,
+.horn-left-bottom {
+    left: 0;
+}
+
+.horn-right-top,
+.horn-right-bottom {
+    right: 0;
+}
+
+.horn-left-top {
+    border-right: 5px solid #1C1F52;
+    border-bottom: 5px solid #1C1F52;
+}
+
+.horn-right-top {
+    border-left: 5px solid #1C1F52;
+    border-bottom: 5px solid #1C1F52;
+}
+
+.horn-left-bottom {
+    border-top: 5px solid #1C1F52;
+    border-right: 5px solid #1C1F52;
+}
+
+.horn-right-bottom {
+    border-top: 5px solid #1C1F52;
+    border-left: 5px solid #1C1F52;
+}
+
+
+/* 粒子波浪效果 */
+canvas {
+    display: block;
+}
+
+.waves {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* 代码雨特效 */
+#cvs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 600px;
+    height: 600px;
+    z-index: 7;
+}
+
+/* 浮动气泡特效 */
+
+/* #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    z-index: -100;
+    background-color: #1C1F52;
+} */
