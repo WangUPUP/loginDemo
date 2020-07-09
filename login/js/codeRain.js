@@ -1,13 +1,16 @@
     var cvs = document.getElementById("cvs");
     var ctx = cvs.getContext("2d");
-    var cw = cvs.width = document.body.clientWidth;
-    var ch = cvs.height = document.body.clientHeight;
+    // 画布大小
+    var cw = cvs.width = 600;
+    var ch = cvs.height =600;
+    // var cw = cvs.width = document.body.clientWidth;
+    // var ch = cvs.height = document.body.clientHeight;
     //动画绘制对象
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     var codeRainArr = []; //代码雨数组
-    var cols = parseInt(cw / 100); //代码雨列数
-    var step = parseInt(Math.random() * 300);    //步长，每一列内部数字之间的上下间隔
-    ctx.font = "bold 50px microsoft yahei"; //声明字体，个人喜欢微软雅黑
+    var cols = parseInt(cw / 30); //代码雨列数
+    var step = parseInt(Math.random() * 95);    //步长，每一列内部数字之间的上下间隔
+    ctx.font = "bold 25px microsoft yahei"; //声明字体，个人喜欢微软雅黑
   
     function createColorCv() {
         //画布基本颜色
@@ -40,8 +43,8 @@
                     x: colx,
                     y: -(step * i) - basePos,
                     speed: speed,
-                     text : parseInt(Math.random()*10), //随机生成0或者1
-                    //  text : parseInt(Math.random()*10)%2 == 0 ? 0 : 1, //随机生成0或者1
+                    //  text : parseInt(Math.random()*10), //随机生成0或者1
+                     text : parseInt(Math.random()*10)%2 == 0 ? 0 : 1, //随机生成0或者1
                     // text: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "s", "t", "u", "v", "w", "x", "y", "z"][parseInt(Math.random() * 11)], //随机生成字母数组中的一个
                     color: "rgb(" + rgbr + ',' + rgbg + ',' + rgbb + ")"
                 }

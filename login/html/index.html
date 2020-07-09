@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>登录</title>
     <link rel="stylesheet" href="../css/gobal.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <script type="text/javascript" src="../js/index.js" ></script>
-	
+    <script type="text/javascript" src="../js/jquery.min.js" ></script>
 </head>
 <body>
-	<header><h1>恒溢科技有限公司</h1></header>
+	<header>
+		<h1>恒溢科技有限公司</h1>
+		<div class="line_right"></div>
+		<div class="line_left"></div>
+	</header>
 	<main>
+		<!-- 登录区 -->
 		<section class="login">
 			<div class="login_header"><h1>用户登录</h1></div>
-			<form action="" method="post">
+			<!-- <form action="" method="post"> -->
 				<div class="login_body">
 					<div class="input_body">
 						<img src="../img/denglu-xuanzhong.png" alt="">
-						<input type="text" placeholder="用户名" />
+						<input type="text" placeholder="用户名" required name="username" />
 					</div>
 					<div class="input_body">
 						<img src="../img/mima-buxianshi.png" alt="">
-						<input type="password" placeholder="密码" />
+						<input type="password" placeholder="密码" required name="password" />
 					</div>
 					<div class="login_footer">
 						<div class="remember">
@@ -34,20 +38,41 @@
 						</div>
 					</div>
 				</div>
-				<button class="submit">登 录</button>
-		</form>
+				<input type="submit" class="submit" value="登录">
+		<!-- </form> -->
+		<!-- 登录框四角 -->
 			<div class="horn-left-top"></div>
 			<div class="horn-right-top"></div>
 			<div class="horn-left-bottom"></div>
 			<div class="horn-right-bottom"></div>
 		</section>
-	</main>  
-	<div class="waves"></div>
-	<canvas id="cvs"></canvas>
-	<!-- <canvas id="background"></canvas> -->
-
+	</main> 
+	<!-- 动画区 -->
+		<div class="animation">
+		<!-- 粒子波浪 -->
+			<div class="waves"></div>
+		<!-- 代码雨 -->
+		<div>
+			<canvas id="cvs"></canvas>
+		</div>
+		<!-- 气泡 -->
+		<div>
+			<canvas id="c" width="600" height="600"></canvas>
+		</div>
+		<!-- 浮动楼房 -->
+		<div>
+			<img src="../img/denglu_loufang.png" class="loufang">
+			<img src="../img/denglu_guangxiao.png" class="guangquan">
+		</div>
+		<!-- 圆点连线特效 -->
+		<div>
+			<canvas id="dotLine" width="600" height="600"></canvas>
+		</div>
+	</div> 
 	<script type="text/javascript" src="../js/wave.js" ></script>
 	<script type="text/javascript" src="../js/codeRain.js" ></script>
 	<!-- <script type="text/javascript" src="../js/bubble.js" ></script> -->
+	<script type="text/javascript" src="../js/dotLine.js" ></script>
+	
 </body>
 </html>

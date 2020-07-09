@@ -5,16 +5,37 @@ header {
 
 main {
     position: relative;
-    background-image: url(../img/denglu_zuoshangjiao.png);
+    /* background-image: url(../img/denglu_zuoshangjiao.png); */
     height: auto;
 }
 
 /* 标题 */
-header h1 {
+header h1,
+header .line_left,
+header .line_right {
     position: absolute;
     left: 50%;
     transform: translateX(-178px);
     top: 20px;
+    z-index: 100;
+}
+
+header .line_left,
+header .line_right {
+    position: absolute;
+    width: 75px;
+    height: 1px;
+    top: 80px;
+    left: 1010px;
+}
+
+header .line_left {
+    background: linear-gradient(to left, #0286D0, #0A2B70);
+}
+
+header .line_right {
+    left: 1085px;
+    background: linear-gradient(to right, #0286D0, #0A2B70);
 }
 
 /* 登录部分 */
@@ -25,7 +46,7 @@ section {
 .login {
     width: 400px;
     height: 400px;
-    background-color: #1C1F52;
+    background-color: rgba(28, 31, 82, 0.7);
     border: 1px solid #0B3A68;
     position: absolute;
     top: 180px;
@@ -194,7 +215,7 @@ canvas {
 .waves {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 200px;
     right: 0;
     bottom: 0;
 }
@@ -204,19 +225,62 @@ canvas {
     position: absolute;
     left: 0;
     top: 0;
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
     z-index: 7;
 }
 
 /* 浮动气泡特效 */
 
-/* #background {
-    position: fixed;
-    top: 0;
+#c {
+    /* position: absolute;
     left: 0;
-    width: 600px;
-    height: 600px;
-    z-index: -100;
-    background-color: #1C1F52;
-} */
+    top: 0; */
+    z-index: 6;
+    width: 650px;
+    height: 650px;
+}
+
+/* 楼房特效 */
+.loufang,
+.guangquan {
+    position: absolute;
+    left: 300px;
+    top: 0;
+    z-index: 8;
+    width: 1200px;
+    height: 1000px;
+}
+
+.loufang {
+    animation: turn 3s linear infinite;
+}
+
+@keyframes turn {
+    0% {
+        top: 0;
+    }
+
+    25% {
+        top: 20px;
+    }
+
+    50% {
+        top: 40px;
+    }
+
+    75% {
+        top: 20px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+/* 圆点连线特效 */
+#dotLine {
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
