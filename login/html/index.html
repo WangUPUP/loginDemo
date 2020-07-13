@@ -6,7 +6,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="../css/gobal.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <script type="text/javascript" src="../js/jquery.min.js" ></script>
+	<script type="text/javascript" src="../js/jquery.min.js" ></script>
 </head>
 <body>
 	<header>
@@ -18,15 +18,16 @@
 		<!-- 登录区 -->
 		<section class="login">
 			<div class="login_header"><h1>用户登录</h1></div>
-			<!-- <form action="" method="post"> -->
+			<!-- <form action="demo.html" method="post" > -->
+			<form>
 				<div class="login_body">
 					<div class="input_body">
-						<img src="../img/denglu-xuanzhong.png" alt="">
-						<input type="text" placeholder="用户名" required name="username" />
+						<img src="../img/denglu-xuanzhong.png">
+						<input type="text" placeholder="用户名" required name="username" id="username"   />
 					</div>
 					<div class="input_body">
-						<img src="../img/mima-buxianshi.png" alt="">
-						<input type="password" placeholder="密码" required name="password" />
+						<img src="../img/mima-buxianshi.png">
+						<input type="password" placeholder="密码" required name="password" id="password"  />
 					</div>
 					<div class="login_footer">
 						<div class="remember">
@@ -38,8 +39,8 @@
 						</div>
 					</div>
 				</div>
-				<input type="submit" class="submit" value="登录">
-		<!-- </form> -->
+				<button type="button" class="submit" id="loginBtn">登录</button>
+		</form>
 		<!-- 登录框四角 -->
 			<div class="horn-left-top"></div>
 			<div class="horn-right-top"></div>
@@ -55,24 +56,50 @@
 		<div>
 			<canvas id="cvs"></canvas>
 		</div>
-		<!-- 气泡 -->
-		<div>
-			<canvas id="c" width="600" height="600"></canvas>
-		</div>
 		<!-- 浮动楼房 -->
-		<div>
+		<div >
 			<img src="../img/denglu_loufang.png" class="loufang">
-			<img src="../img/denglu_guangxiao.png" class="guangquan">
+			<img src="../img/denglu_guangxiao.png" class="loufang">
 		</div>
 		<!-- 圆点连线特效 -->
 		<div>
-			<canvas id="dotLine" width="600" height="600"></canvas>
+			<canvas id="dotLine"></canvas>
+		</div>
+		<!-- 星光特效 -->
+		<div>
+			<canvas id="stars" width="500" height="400"></canvas>
 		</div>
 	</div> 
 	<script type="text/javascript" src="../js/wave.js" ></script>
 	<script type="text/javascript" src="../js/codeRain.js" ></script>
-	<!-- <script type="text/javascript" src="../js/bubble.js" ></script> -->
 	<script type="text/javascript" src="../js/dotLine.js" ></script>
-	
+	<script type="text/javascript" src="../js/stars.js" ></script>
+	<script>
+	$(function(){
+				$("#loginBtn").click(function(){
+					var username = $("#username").val();//取值
+					var password = $("#password").val();
+					if(!username){
+						alert("请输入用户名");
+						$("#username").focus();//获取焦点
+						return ;
+					}
+					if(!password){
+						alert("请输入密码");
+						$("#password").focus();//获取焦点
+						return ;
+					}
+					//var param = "username="+username+"&password="+password;  
+					var param = {"username":username,"password":password}; 
+					// $.post("/html/demo.html",param,function(result){
+					// 	if(result){
+					// 		window.location.href="/html/demo.html";	
+					// 	}else{
+					// 		alert("用户名或者密码错误!");
+					// 	}
+					// });
+				});
+			});
+	</script>
 </body>
 </html>

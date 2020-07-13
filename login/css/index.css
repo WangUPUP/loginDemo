@@ -49,7 +49,7 @@ section {
     background-color: rgba(28, 31, 82, 0.7);
     border: 1px solid #0B3A68;
     position: absolute;
-    top: 180px;
+    top: 320px;
     right: 150px;
 }
 
@@ -76,6 +76,7 @@ section {
     border-radius: 5px;
     position: relative;
     margin-bottom: 30px;
+    background-color: rgba(28, 31, 82, 0.7);
 }
 
 .input_body img {
@@ -96,7 +97,13 @@ section {
     font-size: 20px;
     background-color: #1C1F52;
     color: #fff;
+}
 
+/* 输入框自动填充样式修改 */
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s !important;
 }
 
 /* 登录底部区域 */
@@ -187,23 +194,23 @@ section {
 }
 
 .horn-left-top {
-    border-right: 5px solid #1C1F52;
-    border-bottom: 5px solid #1C1F52;
+    border-right: 5px solid rgba(28, 31, 82, 0);
+    border-bottom: 5px solid rgba(28, 31, 82, 0);
 }
 
 .horn-right-top {
-    border-left: 5px solid #1C1F52;
-    border-bottom: 5px solid #1C1F52;
+    border-left: 5px solid rgba(28, 31, 82, 0);
+    border-bottom: 5px solid rgba(28, 31, 82, 0);
 }
 
 .horn-left-bottom {
-    border-top: 5px solid #1C1F52;
-    border-right: 5px solid #1C1F52;
+    border-top: 5px solid rgba(28, 31, 82, 0);
+    border-right: 5px solid rgba(28, 31, 82, 0);
 }
 
 .horn-right-bottom {
-    border-top: 5px solid #1C1F52;
-    border-left: 5px solid #1C1F52;
+    border-top: 5px solid rgba(28, 31, 82, 0);
+    border-left: 5px solid rgba(28, 31, 82, 0);
 }
 
 
@@ -215,27 +222,14 @@ canvas {
 .waves {
     position: absolute;
     left: 0;
-    top: 200px;
+    /* top: 700px; */
     right: 0;
-    bottom: 0;
-}
-
-/* 代码雨特效 */
-#cvs {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 650px;
-    height: 650px;
-    z-index: 7;
+    bottom: -50px;
+    height: 300px;
 }
 
 /* 浮动气泡特效 */
-
 #c {
-    /* position: absolute;
-    left: 0;
-    top: 0; */
     z-index: 6;
     width: 650px;
     height: 650px;
@@ -245,42 +239,26 @@ canvas {
 .loufang,
 .guangquan {
     position: absolute;
-    left: 300px;
+    left: 100px;
     top: 0;
     z-index: 8;
-    width: 1200px;
+    width: 1800px;
     height: 1000px;
 }
 
-.loufang {
-    animation: turn 3s linear infinite;
-}
-
-@keyframes turn {
-    0% {
-        top: 0;
-    }
-
-    25% {
-        top: 20px;
-    }
-
-    50% {
-        top: 40px;
-    }
-
-    75% {
-        top: 20px;
-    }
-
-    100% {
-        top: 0;
-    }
-}
 
 /* 圆点连线特效 */
 #dotLine {
     position: absolute;
     top: 0px;
-    right: 0;
+    right: 200px;
+}
+
+
+/* 星光特效 */
+#stars {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 10;
 }

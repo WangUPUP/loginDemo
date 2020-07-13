@@ -2,13 +2,14 @@ var canvas = document.getElementById("dotLine");
         
 		function Starry() {
 			this.cxt = canvas.getContext("2d");
-			this.num = 100;
+			this.num = 30;
 			this.data = [];
 		}
 		Starry.prototype = {
-			init: function() {
-				canvas.width = 1000;
-				canvas.height = 600;
+            init: function () {
+                // 设置画布大小
+				canvas.width = 800;
+				canvas.height = 500;
 				// canvas.width = window.innerWidth;
 				// canvas.height = window.innerHeight;
 				var cS = canvas.width;
@@ -77,8 +78,9 @@ var canvas = document.getElementById("dotLine");
 					}
 					this.drawCircle(this.data[i].x, this.data[i].y);
 					//勾股定理
-					for(var j = i + 1; j < this.num; j++) {
-						if(Math.pow(this.data[i].x - this.data[j].x, 2) + Math.pow(this.data[i].y - this.data[j].y, 2) < 50 * 50) {							
+                    for (var j = i + 1; j < this.num; j++) {
+                        // 控制连线长度
+						if(Math.pow(this.data[i].x - this.data[j].x, 2) + Math.pow(this.data[i].y - this.data[j].y, 2) < 100 * 100) {							
 							this.drawLine(this.data[i].x, this.data[i].y, this.data[j].x, this.data[j].y);
 							//							console.log("aa");
 							/*this.drawMouseLine(this.data[i].x, this.data[i].y, event.clientX, event.clientY);*/

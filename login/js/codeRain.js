@@ -1,16 +1,17 @@
     var cvs = document.getElementById("cvs");
     var ctx = cvs.getContext("2d");
     // 画布大小
-    var cw = cvs.width = 600;
-    var ch = cvs.height =600;
+    var cw = cvs.width = 400;
+    var ch = cvs.height =550;
     // var cw = cvs.width = document.body.clientWidth;
     // var ch = cvs.height = document.body.clientHeight;
     //动画绘制对象
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     var codeRainArr = []; //代码雨数组
-    var cols = parseInt(cw / 30); //代码雨列数
-    var step = parseInt(Math.random() * 95);    //步长，每一列内部数字之间的上下间隔
-    ctx.font = "bold 25px microsoft yahei"; //声明字体，个人喜欢微软雅黑
+    var cols = parseInt(cw / 80); //代码雨列数
+    var step = parseInt(Math.random() * 50 );    //步长，每一列内部数字之间的上下间隔
+    ctx.font = " 25px Microsoft YaHei"; //声明字体
+    // ctx.font = "blod 25px microsoft yahei"; //声明字体
   
     function createColorCv() {
         //画布基本颜色
@@ -23,9 +24,10 @@
         for (var n = 0; n < cols; n++) {
             var col = [];
             //基础位置，为了列与列之间产生错位
-            var basePos = parseInt(Math.random() * 400);
+            var basePos = parseInt(Math.random() * 200);
             //随机速度 3~13之间
-            var speed = parseInt(Math.random() * 10) + 3;
+            // var speed = parseInt(Math.random() * 10) + 3;
+            var speed = parseInt(Math.random() * 5);
             //每组的x轴位置随机产生
             var colx = parseInt(Math.random() * cw)
   
@@ -89,8 +91,6 @@
   
                 //4 一致绿
                 ctx.fillStyle = code.color;
-  
-  
                 //把代码画出来
                 ctx.fillText(code.text, code.x, code.y);
             }
