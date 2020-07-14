@@ -9,7 +9,7 @@
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     var codeRainArr = []; //代码雨数组
     var cols = parseInt(cw / 80); //代码雨列数
-    var step = parseInt(Math.random() * 50 );    //步长，每一列内部数字之间的上下间隔
+    var step = parseInt(Math.random() * 100 );    //步长，每一列内部数字之间的上下间隔
     ctx.font = " 25px Microsoft YaHei"; //声明字体
     // ctx.font = "blod 25px microsoft yahei"; //声明字体
   
@@ -30,7 +30,7 @@
             var speed = parseInt(Math.random() * 5);
             //每组的x轴位置随机产生
             var colx = parseInt(Math.random() * cw)
-  
+
             //绿色随机
             var rgbr = 48;
             var rgbg = 52;
@@ -39,8 +39,8 @@
             // var rgbg = parseInt(Math.random() * 255);
             // var rgbb = 0;
             //ctx.fillStyle = "rgb("+r+','+g+','+b+")"
-  
             for (var i = 0; i < parseInt(ch / step) / 2; i++) {
+                console.log(colx[i]);
                 var code = {
                     x: colx,
                     y: -(step * i) - basePos,

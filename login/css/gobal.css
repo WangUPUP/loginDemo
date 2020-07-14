@@ -6,8 +6,8 @@
 html,
 body {
     height: 100%;
-    background-color: #070C42;
-
+    /* background-color: #070C42; */
+    background-image: url(../img/denglu_beijing.png);
 }
 
 body {
@@ -18,6 +18,13 @@ body {
 
 a {
     text-decoration: none;
+}
+
+h1,
+h2,
+h4,
+h5 {
+    font-weight: normal;
 }
 
 input::-webkit-input-placeholder {
