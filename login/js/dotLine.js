@@ -2,16 +2,16 @@ var canvas = document.getElementById("dotLine");
         
 		function Starry() {
 			this.cxt = canvas.getContext("2d");
-			this.num = 30;
+			this.num = 15;
 			this.data = [];
 		}
 		Starry.prototype = {
-            init: function () {
+			init: function () {
+				// canvas.width = 800;
+				// canvas.height = 500;
                 // 设置画布大小
-				canvas.width = 800;
-				canvas.height = 500;
-				// canvas.width = window.innerWidth;
-				// canvas.height = window.innerHeight;
+				canvas.width = parseInt(window.innerWidth*0.3);
+                canvas.height = parseInt(window.innerHeight*0.6);
 				var cS = canvas.width;
 				var cH = canvas.height;
 
@@ -31,7 +31,8 @@ var canvas = document.getElementById("dotLine");
 			drawCircle: function(x, y) {
 				var cxt = this.cxt;
 				cxt.save();
-				cxt.fillStyle = '#263054';
+				// cxt.fillStyle = '#263054';
+				cxt.fillStyle = 'rgba(255,255,255,0.5)';
 				cxt.beginPath();
 				cxt.arc(x, y, 5, 0, Math.PI * 2, false);
 				cxt.closePath();
@@ -43,7 +44,7 @@ var canvas = document.getElementById("dotLine");
 				cxt.save();
 				var line = cxt.createLinearGradient(x1, y1, x2, y2);
 				line.addColorStop(0, "#369");
-				line.addColorStop(1, "#333");
+				line.addColorStop(1, "#369");
 				cxt.strokeStyle = line;
 				cxt.beginPath();
 				cxt.moveTo(x1, y1);
@@ -99,8 +100,12 @@ var canvas = document.getElementById("dotLine");
 				}
 			}*/
 
+}
+onresize = function () {
+	canvas.width = parseInt(window.innerWidth * 0.3)
+	canvas.height = parseInt(window.innerHeight * 0.6)
 		}
-		var starry = new Starry();
+var starry = new Starry();
 		starry.init();
 		setInterval(function() {
 			starry.moveCircle();

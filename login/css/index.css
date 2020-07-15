@@ -1,43 +1,52 @@
 header {
     color: #fff;
+    height: 10%;
     position: relative;
 }
 
 main {
     position: relative;
     /* background-image: url(../img/denglu_zuoshangjiao.png); */
-    height: auto;
+    height: 100%;
 }
 
 /* 标题 */
-header h1,
-header .line_left,
-header .line_right {
+header h1 {
     position: absolute;
     left: 50%;
-    transform: translateX(-178px);
-    top: 20px;
+    /* margin-left: -178px; */
+    transform: translateX(-35%);
+    /* top: 20px; */
+    top: 20%;
     z-index: 100;
+    width: 25%;
+    min-width: 256px;
 }
 
 /* 标题底部横线 */
 header .line_left,
 header .line_right {
     position: absolute;
-    width: 55px;
+    width: 56px;
+    /* width: 100%; */
     height: 1px;
-    top: 80px;
-    left: 1025px;
+    top: 70px;
 }
 
 header .line_left {
+    /* left: 850px; */
+    left: 50%;
+    transform: translateX(-185%);
     background: linear-gradient(to left, #0286D0, #0A2B70);
 }
 
 header .line_right {
-    left: 1080px;
+    /* left: 900px; */
+    left: 50%;
+    transform: translateX(-86%);
     background: linear-gradient(to right, #0286D0, #0A2B70);
 }
+
 
 /* 登录部分 */
 section {
@@ -45,13 +54,16 @@ section {
 }
 
 .login {
-    width: 400px;
-    height: 400px;
+    width: 20%;
+    height: 20%;
+    min-width: 400px;
+    min-height: 400px;
     background-color: rgba(28, 31, 82, 0.7);
     border: 1px solid #0B3A68;
     position: absolute;
-    top: 320px;
-    right: 150px;
+    /* top: 320px; */
+    top: 25%;
+    right: 10%;
 }
 
 /* 登录标题 */
@@ -215,6 +227,39 @@ input:-internal-autofill-selected {
     border-left: 5px solid rgba(28, 31, 82, 0);
 }
 
+/* 楼房图片 */
+.loufang,
+.guangxiao {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    z-index: 8;
+    width: 90%;
+    height: 100%;
+    min-width: 1200px;
+    min-height: 800px;
+}
+
+.loufang {
+    background-image: url(../img/denglu_loufang.png);
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+}
+
+.guangxiao {
+    background-image: url(../img/denglu_guangxiao.png);
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/* 代码雨特效 */
+#cvs {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 /* 粒子波浪效果 */
 canvas {
@@ -230,30 +275,11 @@ canvas {
     height: 300px;
 }
 
-/* 浮动气泡特效 */
-#c {
-    z-index: 6;
-    width: 650px;
-    height: 650px;
-}
-
-/* 楼房特效 */
-.loufang,
-.guangquan {
-    position: absolute;
-    left: 100px;
-    top: 0;
-    z-index: 8;
-    width: 1600px;
-    height: 1000px;
-}
-
-
 /* 圆点连线特效 */
 #dotLine {
     position: absolute;
     top: 0px;
-    right: 200px;
+    right: 1%;
 }
 
 
@@ -264,3 +290,14 @@ canvas {
     left: 20%;
     z-index: 10;
 }
+
+/* 媒体查询 */
+@media screen and (max-width : 900px) {
+
+    #cvs,
+    #dotLine {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 550px) {}

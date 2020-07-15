@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录</title>
     <link rel="stylesheet" href="../css/gobal.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../bootstrap//css//bootstrap-theme.min.css">
 	<script type="text/javascript" src="../js/jquery.min.js" ></script>
 </head>
 <body>
 	<header>
-		<h1>恒溢科技有限公司</h1>
-		<div class="line_right"></div>
-		<div class="line_left"></div>
+        <h1>恒溢科技有限公司</h1>
+        <div class="line">
+            <div class="line_left"></div>
+            <div class="line_right"></div>
+        </div>
 	</header>
 	<main>
 		<!-- 登录区 -->
@@ -47,7 +51,7 @@
 			<div class="horn-left-bottom"></div>
 			<div class="horn-right-bottom"></div>
 		</section>
-	</main> 
+    </main> 
 	<!-- 动画区 -->
 		<div class="animation">
 		<!-- 粒子波浪 -->
@@ -58,22 +62,23 @@
 		</div>
 		<!-- 浮动楼房 -->
 		<div >
-			<img src="../img/denglu_loufang.png" class="loufang">
-			<img src="../img/denglu_guangxiao.png" class="loufang">
+            <div class="loufang"></div>
+            <div class="guangxiao"></div>
 		</div>
 		<!-- 圆点连线特效 -->
 		<div>
-			<canvas id="dotLine"></canvas>
+        <canvas id="dotLine"></canvas>
 		</div>
 		<!-- 星光特效 -->
 		<div>
 			<canvas id="stars" width="500" height="400"></canvas>
 		</div>
-	</div> 
+    </div> 
 	<script type="text/javascript" src="../js/wave.js" ></script>
 	<script type="text/javascript" src="../js/codeRain.js" ></script>
 	<script type="text/javascript" src="../js/dotLine.js" ></script>
-	<script type="text/javascript" src="../js/stars.js" ></script>
+    <script type="text/javascript" src="../js/stars.js" ></script>
+    <!-- <script src="../bootstrap//js//bootstrap.min.js"></script> -->
 	<script>
 	$(function(){
 				$("#loginBtn").click(function(){

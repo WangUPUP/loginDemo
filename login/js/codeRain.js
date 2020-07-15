@@ -1,10 +1,12 @@
     var cvs = document.getElementById("cvs");
     var ctx = cvs.getContext("2d");
     // 画布大小
-    var cw = cvs.width = 400;
-    var ch = cvs.height =550;
-    // var cw = cvs.width = document.body.clientWidth;
-    // var ch = cvs.height = document.body.clientHeight;
+    var cw = cvs.width = parseInt(window.innerWidth * 0.3);
+    var ch = cvs.height =parseInt(window.innerHeight * 0.6);
+    // var cw = cvs.width = 400;
+    // var ch = cvs.height =550;
+    // var cw = cvs.width = window.innerWidth;
+    // var ch = cvs.height = window.innerHeight;
     //动画绘制对象
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     var codeRainArr = []; //代码雨数组
@@ -40,7 +42,6 @@
             // var rgbb = 0;
             //ctx.fillStyle = "rgb("+r+','+g+','+b+")"
             for (var i = 0; i < parseInt(ch / step) / 2; i++) {
-                console.log(colx[i]);
                 var code = {
                     x: colx,
                     y: -(step * i) - basePos,
@@ -97,8 +98,8 @@
         }
         requestAnimationFrame(codeRaining);
     }
-  
-    //创建代码雨
-    createCodeRain();
-    //开始下雨吧 GO>>
-    requestAnimationFrame(codeRaining);
+    
+//创建代码雨
+createCodeRain();
+//开始下雨吧 GO>>
+requestAnimationFrame(codeRaining);

@@ -178,7 +178,11 @@ var context;//整个上下文
      }
 
     //页面加载
-     window.onload= function(){
+window.onload = function () {
+    stars.width = 500
+    stars.height = 400
+    // stars.width = window.innerWidth
+    // stars.height = window.innerHeight 
         init();//调用初始化方法
         //循环画星星
         for(var i=0;i<starCount;i++){
