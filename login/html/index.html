@@ -14,8 +14,6 @@
 	<header>
         <h1>恒溢科技有限公司</h1>
         <div class="line">
-            <div class="line_left"></div>
-            <div class="line_right"></div>
         </div>
 	</header>
 	<main>
@@ -25,24 +23,24 @@
 			<!-- <form action="demo.html" method="post" > -->
 			<form>
 				<div class="login_body">
-					<div class="input_body">
-						<img src="../img/denglu-xuanzhong.png">
-						<input type="text" placeholder="用户名" required name="username" id="username"   />
+					<div class="input_body_username">
+						<img src="../img/denglu-xuanzhong.png" class="login_icon">
+						<input type="text" placeholder="用户名" required name="username" id="username" class="login_input"/>
 					</div>
-					<div class="input_body">
-						<img src="../img/mima-buxianshi.png">
-						<input type="password" placeholder="密码" required name="password" id="password"  />
-					</div>
-					<div class="login_footer">
-						<div class="remember">
-							<input type="checkbox" class="remember_frame">
-							<div>记住密码</div>
-						</div>
-						<div class="forget">
-							<a href="#">忘记密码?</a>
-						</div>
+					<div class="input_body_password">
+                        <img src="../img/mima-buxianshi.png" class="login_icon">
+						<input type="password" placeholder="密码" required name="password" id="password" class="login_input"/>
 					</div>
 				</div>
+                <div class="login_footer">
+                    <div class="remember">
+                        <input type="checkbox" class="remember_frame">
+                        <div>记住密码</div>
+                    </div>
+                    <div class="forget">
+                        <a href="#">忘记密码?</a>
+                    </div>
+                </div>
 				<button type="button" class="submit" id="loginBtn">登 录</button>
 		</form>
 		<!-- 登录框四角 -->

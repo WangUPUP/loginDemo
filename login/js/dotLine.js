@@ -2,16 +2,14 @@ var canvas = document.getElementById("dotLine");
         
 		function Starry() {
 			this.cxt = canvas.getContext("2d");
-			this.num = 15;
+			this.num = 20;
 			this.data = [];
 		}
 		Starry.prototype = {
 			init: function () {
-				// canvas.width = 800;
-				// canvas.height = 500;
                 // 设置画布大小
 				canvas.width = parseInt(window.innerWidth*0.3);
-                canvas.height = parseInt(window.innerHeight*0.6);
+                canvas.height = parseInt(window.innerHeight*0.4);
 				var cS = canvas.width;
 				var cH = canvas.height;
 

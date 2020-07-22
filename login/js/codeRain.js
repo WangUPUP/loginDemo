@@ -3,8 +3,6 @@
     // 画布大小
     var cw = cvs.width = parseInt(window.innerWidth * 0.3);
     var ch = cvs.height =parseInt(window.innerHeight * 0.6);
-    // var cw = cvs.width = 400;
-    // var ch = cvs.height =550;
     // var cw = cvs.width = window.innerWidth;
     // var ch = cvs.height = window.innerHeight;
     //动画绘制对象
@@ -26,7 +24,8 @@
         for (var n = 0; n < cols; n++) {
             var col = [];
             //基础位置，为了列与列之间产生错位
-            var basePos = parseInt(Math.random() * 200);
+            // var basePos = parseInt(Math.random() * 200);
+            var basePos = 2;
             //随机速度 3~13之间
             // var speed = parseInt(Math.random() * 10) + 3;
             var speed = parseInt(Math.random() * 5);

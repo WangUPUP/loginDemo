@@ -10,8 +10,8 @@ var context;//整个上下文
          //获取canvas
          var stars=document.getElementById("stars");
          //获取当前窗口的宽度和高度
-        //  stars.width=window.innerWidth;//窗口宽度
-        //  stars.height=window.innerHeight;//窗口高度
+         stars.width=parseInt(window.innerWidth *0.3);//窗口宽度
+         stars.height= parseInt(window.innerHeight *0.6);//窗口高度
          //获取上下文context
          context=stars.getContext("2d");//返回画布环境2d画面效果
 
