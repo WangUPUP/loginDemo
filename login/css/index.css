@@ -11,13 +11,15 @@ main {
 }
 
 /* 标题 */
-header h1 {
+.title {
     position: absolute;
-    left: 50%;
-    transform: translateX(-35%);
+    /* left: 50%; */
+    /* transform: translateX(-35%); */
+    text-align: center;
     top: 20%;
     z-index: 100;
-    width: 16rem;
+    width: 100%;
+    font-size: 45px;
 }
 
 /* 标题底部横线 */
@@ -25,9 +27,9 @@ header h1 {
 .line {
     position: absolute;
     left: 50%;
-    transform: translateX(-12%);
-    top: 45%;
-    width: 6rem;
+    transform: translateX(-50%);
+    top: 4.5rem;
+    width: 9rem;
     height: 0.0625rem;
     background: linear-gradient(to left, #0A2B70, #0286D0, #0A2B70);
 }

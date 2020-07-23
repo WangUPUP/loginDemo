@@ -9,7 +9,7 @@
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     var codeRainArr = []; //代码雨数组
     var cols = parseInt(cw / 80); //代码雨列数
-    var step = parseInt(Math.random() * 100 );    //步长，每一列内部数字之间的上下间隔
+    var step = parseInt(Math.random() * (100-40 + 1) +40,10 );    //步长，每一列内部数字之间的上下间隔
     ctx.font = " 25px Microsoft YaHei"; //声明字体
     // ctx.font = "blod 25px microsoft yahei"; //声明字体
   
@@ -24,8 +24,8 @@
         for (var n = 0; n < cols; n++) {
             var col = [];
             //基础位置，为了列与列之间产生错位
-            // var basePos = parseInt(Math.random() * 200);
-            var basePos = 2;
+            var basePos = parseInt(Math.random() * 200);
+            // var basePos = 2;
             //随机速度 3~13之间
             // var speed = parseInt(Math.random() * 10) + 3;
             var speed = parseInt(Math.random() * 5);
