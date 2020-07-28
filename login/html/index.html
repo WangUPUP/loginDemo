@@ -33,17 +33,7 @@
                         <span class="tips_password" id="tips_password"></span>
                     </div>
 				</div>
-                <!-- <div class="login_footer">
-                    <div class="remember">
-                        <input type="checkbox" class="remember_frame" id="checkbox">
-                        <label for="checkbox" class="checkbox">记住密码</label>
-                    </div>
-                    <div class="forget">
-                        <a href="#">忘记密码?</a>
-                    </div>
-                </div> -->
 				<input type="button" class="submit" id="loginBtn" value="登 录" >
-				<!-- <input type="submit" class="submit" id="loginBtn" value="登 录" > -->
 				
 		</form>
 		<!-- 登录框四角 -->
@@ -97,26 +87,6 @@
 			var param = {"username":username,"password":password};
             
 				$.post(href,param,function(result){
-					// if(result.status === 500){
-                    //     if( result.message === '用户不存在' || result.message === '用户名不能为空') {
-                    //         document.getElementById('tips_username').innerHTML= result.message;
-                    //     } else {
-                    //         document.getElementById('tips_password').innerHTML= result.message;
-                    //     }
-					// 	return false
-					// }
-					// else{
-                    //     // document.open();
-					// 	// document.write("<form id = 'form' name='form' method = 'post' action = '"+href+"'>")
-					// 	// document.write("<input type='hidden' name='username' value='"+username+"'>")
-					// 	// document.write("<input type='hidden' name='password' value='"+password+"'>")
-                    //     // document.write("</form>") 
-                    //     // document.close();
-                    //     // document.form.submit()
-                    //     // console.log(result);
-                    //     window.location.href= result.redirectUrl
-                    // }
-
                     if( result.redirectUrl) {
                         window.location.href= result.redirectUrl
                     } else if(result.status === 500){

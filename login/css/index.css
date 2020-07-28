@@ -122,55 +122,6 @@ input:-internal-autofill-selected {
     color: red;
 }
 
-/* 登录底部区域 */
-/* .login_footer {
-    width: 100%;
-    position: absolute;
-    top: 65%;
-    left: 0;
-}
-
-.remember {
-    position: absolute;
-    left: 10%;
-    width: 50%;
-    height: 1.875rem;
-    color: #fff;
-}
-
-.remember_frame {
-    width: 0.9375rem;
-    height: 0.9375rem;
-    margin: 0.5rem;
-}
-
-.checkbox {
-    position: absolute;
-    top: 18%;
-    left: 15%;
-    display: inline-block;
-    width: 3.75rem;
-    font-size: 0.875rem;
-    文本不可被选中
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.forget {
-    width: 50%;
-    position: absolute;
-    top: 12%;
-    right: 10%;
-}
-
-.forget a {
-    position: absolute;
-    right: 0;
-    font-size: 0.875rem;
-    color: #00B8FE;
-} */
 
 /* 登录按钮 */
 .submit {
