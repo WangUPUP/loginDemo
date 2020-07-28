@@ -20,7 +20,7 @@
 		<!-- 登录区 -->
 		<section class="login">
 			<div class="login_header"><h1>用户登录</h1></div>
-			<form  action="http://192.168.1.21:30000/uc/user/login" method="post"  onsubmit="return false"> 
+			<form  action="http://192.168.1.21:30000/uc/user/login" method="post"  onsubmit="return false" name="form" id="form"> 
 				<div class="login_body">
 					<div class="input_body_username">
 						<img src="../img/denglu-xuanzhong.png" class="login_icon">
@@ -74,10 +74,10 @@
 	$(function(){
         var href = "http://192.168.1.21:30000/uc/user/login";
         $("#username").blur(function(){
-            document.getElementById('tips_username').innerHTML= '';
+            $('#tips_username').text('')
         });   
         $("#password").blur(function(){
-            document.getElementById('tips_password').innerHTML= '';
+            $('#tips_password').text('')
         });   
 
 		// 表单提交前 发送ajax请求 根据请求判断账号密码是否正确
@@ -88,12 +88,13 @@
             
 				$.post(href,param,function(result){
                     if( result.redirectUrl) {
+                        document.getElementById("form").reset();
                         window.location.href= result.redirectUrl
                     } else if(result.status === 500){
                         if( result.message === '用户不存在' || result.message === '用户名不能为空') {
-                            document.getElementById('tips_username').innerHTML= result.message;
+                            $('#tips_username').text(result.message)
                         } else {
-                            document.getElementById('tips_password').innerHTML= result.message;
+                            $('#tips_password').text(result.message)
                         }
                     } else {
                         console.log(result);
