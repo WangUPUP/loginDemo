@@ -20,7 +20,7 @@
 		<!-- 登录区 -->
 		<section class="login">
 			<div class="login_header"><h1>用户登录</h1></div>
-			<form  action="http://192.168.1.21:30000/uc/user/login" method="post"  onsubmit="return false" name="form" id="form"> 
+			<form  method="post" name="form" id="form"> 
 				<div class="login_body">
 					<div class="input_body_username">
 						<img src="../img/denglu-xuanzhong.png" class="login_icon">
@@ -73,6 +73,7 @@
 <script>
 	$(function(){
         var href = "http://192.168.1.21:30000/uc/user/login";
+        
         $("#username").blur(function(){
             $('#tips_username').text('')
         });   
@@ -100,7 +101,7 @@
                         console.log(result);
                     }
                     });
-				});
+                });
 			});	
 </script>
 </html>
